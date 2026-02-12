@@ -3,7 +3,7 @@ import clsx from "clsx"
 import {getFarewellText} from "../utils";
 import {languages} from "../languages";
 
-type GameStatus = {
+type GameStatusProps = {
     isGameWon: boolean,
     isGameLost: boolean,
     isGameOver: boolean,
@@ -16,7 +16,7 @@ export default function GameStatus({
                                        isGameOver,
                                        isLastGuessIncorrect,
                                        wrongGuessCount
-                                   }:GameStatus):JSX.Element {
+                                   }:GameStatusProps):JSX.Element {
     const gameStatusClass:string = clsx("game-status", {
         won: isGameWon,
         lost: isGameLost,
